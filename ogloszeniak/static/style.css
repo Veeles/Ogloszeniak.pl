@@ -16,5 +16,8 @@
 .a_nav:hover{
     color: blue;
 }
+div.grey_background {
+    background-color: #F2F4F5;
+}
 
 

@@ -7,16 +7,20 @@
     {% load static %}
     {% load bootstrap5 %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 
 
 </head>
 <body>
-    {% include 'header.html' %}
-    {% block content %}
-    {% endblock %}
-    {% bootstrap_javascript %}
-    {% include 'footer.html' %}
+    <header>
+        {% include 'header.html' %}
+    </header>
 
+    {% block content %} {% endblock %}
+    {% bootstrap_javascript %}
+
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
 </body>
 </html>
