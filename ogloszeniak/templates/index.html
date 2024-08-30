@@ -3,34 +3,42 @@
 {% block title %} Home Page {% endblock %}
 {% block content %}
 <div>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
     <div class="grey_background search_field mb-4 mt-4 " >
-        <div class="container"> 
-            <div class="search"> 
-                <div class="row"> 
-                    <div class="col-md-6"> 
-                        <div class="search-1"> 
-                            <i class='bx bx-search-alt'>
+        <div class="container mt-5 pt-5 pb-5">
+            <div class="input-group">
+                <!-- Pierwsze pole wyszukiwania -->
+                <input type="text" class="form-control" placeholder="Find something for yourself" aria-label="Pierwsze pole">
+                <!-- Drugie pole wyszukiwania -->
+                <input type="text" class="form-control" placeholder="Choose City" aria-label="Drugie pole">
+                <!-- Przycisk wyszukiwania -->
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="index_page_search_button">Szukaj</button>
 
-                            </i> 
-                            <input type="text" placeholder="UX Designer"> 
-                        </div> 
-                    </div> 
-                    <div class="col-md-6"> 
-                        <div> 
-                            <div class="search-2"> 
-                                <i class='bx bxs-map' >
-
-                                </i> <input type="text" placeholder="San Francisco,USA">
-                                 <button>Search</button> 
-                                </div> 
-                            </div>
-                         </div> 
-                        </div> 
-                    </div>
-</div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
+    <div class="categories_h3_text">
+        <h3 class="text-center mt-4 mb-4" style="color: #002f34;">Main Categories</h3>
+        <div class="cards">
+            <div class="d-flex justify-content-center text-center">
+                <div class="p-2 card border-0">
+                    <img src="{% static 'photos/categoriesIcons/animals.png' %}" class="card-img-top rounded-circle" alt="free items photo" style="background-color: orange;">
+                    <div class="card-body">
+                    <h5 class="card-title text-center">Free Items</h5>
+                    </div>
+                </div>
+                <div class="p-2 card border-0">
+                    <img src="{% static 'photos/freeitems.jpg' %}" class="card-img-top" alt="free items photo">
+                    <div class="card-body">
+                    <h5 class="card-title text-center">Free Items</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

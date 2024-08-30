@@ -20,4 +20,18 @@ div.grey_background {
     background-color: #F2F4F5;
 }
 
+#index_page_search_button {
+    background-color: #002f34;
+    color: white;
+    border: 4px solid #002f34;
+}
+#index_page_search_button:hover {
+    background-color: white;
+    color: #002f34;
+    border: 4px solid #002f34;
+}
 
+.card_img_top {
+    border-radius: 50%;
+    width: 50%;
+}
