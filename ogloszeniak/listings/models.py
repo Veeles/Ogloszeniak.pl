@@ -5,8 +5,10 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
-    image_path = models.ImageField()
+    image_path = models.ImageField(upload_to='photos/categoriesIcons/')
     image_background_color = models.TextField()
+
+
 
     def __str__(self):
         return self.name
