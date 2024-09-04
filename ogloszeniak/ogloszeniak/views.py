@@ -5,7 +5,7 @@ from listings.models import Category, Product
 def home_view(request):
     template =  loader.get_template('index.html')
     categories = Category.objects.all().values()
-    products = Product.objects.order_by('-created_at')
+    products = Product.objects.order_by('-created_at')[:40]
     context = {
         'categories':categories,
         'products':products

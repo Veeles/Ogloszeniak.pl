@@ -44,10 +44,15 @@
     <div class="latest_listings pt-2">
         <h3 class="text-center mt-4 mb-4 mt-4" style="color: #002f34;">Latest listings</h3>
         <div class="latest_listings_cards">
-            <div class="d-flex flex-wrap text-center justify-content-center"> 
+            <div class="d-flex flex-wrap text-center justify-content-center mb-3"> 
                 
                 {% for product in products %}
-                
+                {% if forloop.counter0|divisibleby:4 %}
+                </div>
+                <div class="d-flex flex-wrap text-center justify-content-center pb-3"> 
+                {% endif %}
+
+
                 <div class="card me-3" style="width: 301px; height: 500px;">
                     <img class="card-img-top" src="../media/{{product.photo}}" alt="Card image cap" style="width: 301px; height: 350px;">
                     <div class="card-body">
@@ -59,8 +64,11 @@
                     
                 </div>
                 {% endfor %}
+            
             </div>
+        
         </div>
+
 
     </div>
 
