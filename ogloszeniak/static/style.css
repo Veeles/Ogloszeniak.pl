@@ -35,3 +35,21 @@ div.grey_background {
     border-radius: 50%;
     width: 50%;
 }
+
+.categories_cards div.card a:hover h5 {
+    color: white;
+    background-color: #002f34;
+}
+.latest_listings {
+    background-color: #F2F4F5;
+}
+
+p.product_price {
+    font-weight: bold;
+}
+p.product_city {
+    font-size: 14px;
+}
+p.product_voivodeship {
+    font-size: 14px;
+}
