@@ -1,0 +1,9 @@
+{% extend 'base.html' %}
+{% load static %}
+{% block title %} {% endblock %}
+{% block content %} 
+<form method="POST" class="form-group"> 
+    {{form}}
+    <button type="submit" class="btn btn-success"></button>
+</form>
+{% endblock %}
