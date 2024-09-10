@@ -91,3 +91,13 @@ a:hover {
     border-width: 4px;
     border-color: #002f34;
 }
+#register_button {
+    background-color: #002f34;
+    color: white;
+    border: 5px solid #002f34;
+}
+#register_button:hover {
+    background-color: white;
+    color: #002f34;
+    border: 5px solid #002f34;
+}
