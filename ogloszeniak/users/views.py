@@ -5,9 +5,36 @@ from django.template import loader
 from django.http import HttpResponse
 from .forms import RegisterForm
 
-def login_view(response):
-    if response.method == 'POST':
-        pass
+# def login_view(response):
+#     if response.method == 'POST':
+#         pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#     context = {
+#         'form':form
+#     }
+#     template = loader.get_template('login.html')
+#     return HttpResponse(template.render(context, response))
+
 def register_view(response):
     if response.method == "POST":
         form = RegisterForm(response.POST)

@@ -25,7 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home_view, name='home_page'),
     path('', include('listings.urls')),
-    path('', include('users.urls'))
+    path('', include('users.urls')),
+    path('', include("django.contrib.auth.urls")),
 
 ]
 if settings.DEBUG:

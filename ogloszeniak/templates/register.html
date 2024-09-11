@@ -7,6 +7,9 @@
 <form method="POST" class="form-group m-3" > 
     {% csrf_token %}
     {{form|crispy}}
+    <p>Do you have account? <a href="/login">Login</a></p>
+
     <button type="submit" class="btn btn-success" style="width: 200px;" id="register_button">Register</button>
+
 </form>
 {% endblock %}
