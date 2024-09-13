@@ -5,35 +5,15 @@ from django.template import loader
 from django.http import HttpResponse
 from .forms import RegisterForm
 
-# def login_view(response):
-#     if response.method == 'POST':
-#         pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#     context = {
-#         'form':form
-#     }
-#     template = loader.get_template('login.html')
-#     return HttpResponse(template.render(context, response))
+def my_account(request):
+    username = None
+    if request.user.is_authenticated:
+        username = request.user.username
+    template = loader.get_template('myaccount.html')
+    context = {
+        'username':username
+    }
+    return HttpResponse(template.render(context, request))
 
 def register_view(response):
     if response.method == "POST":
