@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Add listing {% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div>
+    <h2 style="color:#002f34; font-weight: 800;" class="text-center mt-4">Add Listing</h2>
+</div>
+<form method="POST" class="m-5 ">
+{% csrf_token %}
+{{ form|crispy }}
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-success text-center" style="width: 300px; color: white; background-color: #002f34;">Add Listing</button>
+    </div>  
+</form>
+
+{% endblock %}

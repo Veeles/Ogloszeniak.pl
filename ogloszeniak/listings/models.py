@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
   
 # Create your models here.
@@ -40,5 +41,6 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='listings')
     city = models.CharField(max_length=200)
     voivodeship = models.CharField(max_length=2,choices=VOIVODESHIP_CHOICES, default='DS')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return self.title

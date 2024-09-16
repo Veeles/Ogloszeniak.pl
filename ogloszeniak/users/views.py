@@ -4,14 +4,18 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
 from .forms import RegisterForm
+from listings.models import Product
 
 def my_account(request):
     username = None
     if request.user.is_authenticated:
         username = request.user.username
     template = loader.get_template('myaccount.html')
+    listings = Product.objects.filter(user = request.user).values() 
+    print(listings)
     context = {
-        'username':username
+        'username':username,
+        'listings': listings
     }
     return HttpResponse(template.render(context, request))
 

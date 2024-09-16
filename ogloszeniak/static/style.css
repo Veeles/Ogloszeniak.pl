@@ -129,3 +129,6 @@ a.dropdown-item {
 .technical_width {
     width: 100%;
 }
+ body{
+    overflow-x: hidden;
+}
