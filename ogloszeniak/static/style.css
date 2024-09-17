@@ -132,3 +132,7 @@ a.dropdown-item {
  body{
     overflow-x: hidden;
 }
+#category_container:hover a{
+    background-color: #002f34;
+    color: white;
+}

@@ -17,6 +17,7 @@
             </div>
         </div>
     </div>
+    
     <div class="categories_h3_text">
         <h3 class="text-center mt-4 mb-4" style="color: #002f34;">Main Categories</h3>
         <div class="categories_cards">
@@ -27,7 +28,7 @@
                 {% else%}
                 <div class="d-flex justify-content-center text-center">
                     <div class="p-2 card border-0 ps-5 pe-5 ms-3 me-3">
-                        <a>
+                        <a href="{% url 'products_category' category.name %}">
                         <img src="../media/{{ category.image_path }}" class="card-img-top rounded-circle text-center mx-auto" alt="{{d.id}}" style="width: 100px; height: 100px; background-color: {{category.image_background_color}};" >
                         <div class="card-body">
                         <h5 class="card-title ">{{category.name}}</h5>

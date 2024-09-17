@@ -12,7 +12,7 @@ def product_details(request, id):
     }
     return HttpResponse(template.render(context,request))
 
-def create_lising(request):
+def create_lising(request, name=None):
     if request.method == 'POST':
         form = ProductForm(request.POST)
         if form.is_valid():
@@ -24,6 +24,14 @@ def create_lising(request):
     form = ProductForm()
     context = {
         "form":form
+    }
+    return HttpResponse(template.render(context,request))
+
+def products_category(request, name):
+    name = name
+    template = loader.get_template('category.html')
+    context = {
+        'dupa':name
     }
     return HttpResponse(template.render(context,request))
 # Create your views here.
