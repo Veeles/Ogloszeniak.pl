@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Product
+from .models import Product, Category
 from django.http import HttpResponse
 from django.template import loader
 from .forms import ProductForm
@@ -28,10 +28,16 @@ def create_lising(request, name=None):
     return HttpResponse(template.render(context,request))
 
 def products_category(request, name):
-    name = name
+    category_name = name
+    category_query = get_object_or_404(Category, name=category_name)
+    category_id = category_query.id
+    category_objects = Product.objects.filter(category=category_id).values()
     template = loader.get_template('category.html')
+    pieces = len(category_objects)
     context = {
-        'dupa':name
+        'products':category_objects,
+        'pieces': pieces,
     }
+    print(category_objects)
     return HttpResponse(template.render(context,request))
 # Create your views here.
