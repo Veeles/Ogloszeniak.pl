@@ -38,6 +38,5 @@ def products_category(request, name):
         'products':category_objects,
         'pieces': pieces,
     }
-    print(category_objects)
     return HttpResponse(template.render(context,request))
 # Create your views here.
