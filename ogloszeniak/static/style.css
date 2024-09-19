@@ -140,3 +140,10 @@ a.dropdown-item {
     color: #002f34;
     
 }
+#message_type_button {
+    color: #002f34;
+    background-color: white;
+}
+#message_type_button:hover {
+    background-color: rgb(35, 229, 219);
+}
