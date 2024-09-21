@@ -143,7 +143,10 @@ a.dropdown-item {
 #message_type_button {
     color: #002f34;
     background-color: white;
+    font-size: 14px;
+    border-color: #002f34;
 }
 #message_type_button:hover {
     background-color: rgb(35, 229, 219);
+    border-color: rgb(35, 229, 219);
 }
