@@ -27,7 +27,7 @@
             <h3 class="ms-2 p-1" style="font-weight: 800;">{{product.price}} zł</h3>
             <div class="justify-content-center text-center">
                 {% if user.is_authenticated %}
-                <button type="button" class="btn btn-secondary ms-2 p-1 mt-2" style="width: 250px;" id="btn_product_message">Send Message</button>
+                <a href="{% url 'my_messages' product.id %}"><button type="button" class="btn btn-secondary ms-2 p-1 mt-2" style="width: 250px;" id="btn_product_message" >Send Message</button> </a>
                 <button type="button" class="btn btn-outline-secondary ms-2 p-1 mt-2" style="width: 250px;" id="btn_product_phone">Send Message</button>
                 {% else %}
                 <button type="button" class="btn btn-secondary ms-2 p-1 mt-2 disabled" style="width: 250px;" id="btn_product_message">Send Message</button>
