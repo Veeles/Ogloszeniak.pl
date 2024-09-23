@@ -6,6 +6,7 @@ class Thread(models.Model):
     seller = models.ForeignKey(User, related_name='seller_thread', on_delete=models.CASCADE)
     buyer = models.ForeignKey(User, related_name='buyer_thread', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    
 
 class Message(models.Model):
     thread = models.ForeignKey(Thread, on_delete=models.CASCADE)
@@ -13,5 +14,5 @@ class Message(models.Model):
     content = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     is_read = models.BooleanField(default=False)
-
+    
 # Create your models here.

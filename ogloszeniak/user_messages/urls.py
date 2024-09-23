@@ -4,7 +4,7 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from messages.views import my_messages
+from user_messages.views import my_messages
 
 urlpatterns = [
     path('messages/<int:id>',my_messages, name='my_messages'),

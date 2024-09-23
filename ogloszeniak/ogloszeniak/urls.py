@@ -27,7 +27,7 @@ urlpatterns = [
     path('', include('listings.urls')),
     path('', include('users.urls')),
     path('', include("django.contrib.auth.urls")),
-    path('', include('messages.urls')),
+    path('', include('user_messages.urls')),
 
 ]
 if settings.DEBUG:

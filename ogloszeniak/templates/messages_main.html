@@ -23,19 +23,21 @@
                 <div style="height: 25px; color: #002f34; font-weight: 600;" class="mt-2 border-bottom" >
                     <p>Readed: </p>
                 </div>
+                {% for thread in threads %}
                 <div style="background-color: rgb(250, 251, 251); width: 350px; margin-left: -12px; " class="mb-3">
                     <div class="row g-1">
                         <div class="col-3 ">
-                            <img src="../media/products/szafa.jpg" alt="lisitng photo" class="rounded-circle  my-2 ms-2" style="width: 30px; height: 30px;">
+                            <img src="../media/{{thread.listings.photo}}" alt="lisitng photo" class="rounded-circle  my-2 ms-2" style="width: 30px; height: 30px;">
                         </div>
                         <div class="col-8 " style="margin-left: -30px;">
-                            <p class="text-start" style="color: grey; margin-top: -5px; "> xxxx</p>
-                            <p class="text-start" style="color: #002f34; font-weight: 600; margin-top: -25px;"> xxxx</p>
+                            <p class="text-start" style="color: grey; margin-top: -5px; "> {{thread.buyer}}</p>
+                            <p class="text-start" style="color: #002f34; font-weight: 600; margin-top: -22px;"> {{thread.listings.title|truncatewords:4}}</p>
                             <p class="text-start" style="color: #002f34; font-weight: 100; margin-top: -25px;"> xxxx</p>
 
                         </div>
                     </div>
                 </div>
+                {% endfor%}
             </div>
             <div class="col-7" style="height: 400px; background-color: white;">
                 
